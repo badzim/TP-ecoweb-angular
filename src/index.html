@@ -23,6 +23,74 @@
       src="https://kit.fontawesome.com/d0dc468526.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Anti RWEB 0042: inline bloated CSS/JS instead of externalizing so nothing is cached across pages -->
+    <style>
+      /* Intentional inline duplication to avoid shared cache and force re-download per page */
+      :root {
+        --inline-accent: #c0392b;
+        --inline-bg: linear-gradient(120deg, #111, #222 40%, #111 80%);
+      }
+      body {
+        background: var(--inline-bg);
+        color: #f5f5f5;
+        min-height: 100vh;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 0.03em;
+      }
+      .inline-banner {
+        padding: 32px;
+        margin: 24px;
+        border: 6px double #444;
+        box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.6);
+        background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.04) 0, rgba(255, 255, 255, 0.04) 10px, rgba(255, 255, 255, 0.02) 10px, rgba(255, 255, 255, 0.02) 20px);
+        text-transform: uppercase;
+      }
+      .inline-banner h1 { margin: 0 0 8px 0; color: var(--inline-accent); }
+      .inline-banner p { margin: 0; font-size: 14px; line-height: 1.6; }
+      /* Duplicate a few heavy utility classes inline */
+      .inline-grid { display: grid; grid-template-columns: repeat(6, minmax(120px, 1fr)); gap: 12px; }
+      .inline-grid .card { background: rgba(255, 255, 255, 0.06); padding: 18px; border-radius: 6px; min-height: 140px; }
+      .inline-grid .card:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-4px) scale(1.01); transition: all 250ms ease; }
+      .inline-pill { padding: 10px 18px; border-radius: 999px; border: 2px solid rgba(255, 255, 255, 0.4); backdrop-filter: blur(2px); }
+      .inline-hero { height: 360px; background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 50%), radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.06), transparent 40%), var(--inline-bg); position: relative; overflow: hidden; }
+      .inline-hero::after { content: ''; position: absolute; inset: 14%; border: 1px dashed rgba(255, 255, 255, 0.2); filter: blur(1px); }
+      .inline-hero .spark { position: absolute; width: 10px; height: 10px; background: var(--inline-accent); filter: drop-shadow(0 0 8px #c0392b); animation: drift 12s infinite alternate ease-in-out; }
+      @keyframes drift { from { transform: translate3d(0, 0, 0); opacity: 0.2; } to { transform: translate3d(120px, -90px, 0) scale(1.6); opacity: 0.9; } }
+      /* Repeated rules to inflate inline payload */
+      .inline-dup-1 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-2 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-3 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-4 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-5 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-6 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-7 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-8 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-9 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+      .inline-dup-10 { margin: 4px; padding: 4px; border: 1px solid #333; background: rgba(255, 255, 255, 0.02); }
+    </style>
+    <script>
+      // Inline JS bundle to bypass external files and defeat caching.
+      (function () {
+        const heavyArray = new Array(2000).fill(0).map((_, i) => i * Math.random());
+        window.__inlineNoise = {
+          payload: heavyArray,
+          stamp: Date.now(),
+          spin() {
+            // Force extra CPU to keep inline script costly.
+            for (let i = 0; i < 20_000; i++) {
+              Math.sqrt((i + 1) * Math.random());
+            }
+            const banner = document.createElement('div');
+            banner.className = 'inline-banner inline-dup-' + (Math.floor(Math.random() * 10) + 1);
+            banner.innerHTML = '<h1>Inline JS</h1><p>Charge volumineuse non cachee.</p>';
+            document.body.prepend(banner);
+          }
+        };
+        // Run immediately to ensure inline code executes before Angular bootstraps.
+        window.__inlineNoise.spin();
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>
