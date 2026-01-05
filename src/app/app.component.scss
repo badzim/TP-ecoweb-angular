@@ -1,5 +1,99 @@
+/* MAUVAISE PRATIQUE RWEB 0036: Énormes CSS monolithiques sans découpage */
+/* Tous les styles sont mélangés dans un seul fichier au lieu d'être séparés par composant */
+
+/* Styles inutilisés et redondants pour bloater le fichier CSS */
+.bloat-style-1 { color: red; font-size: 12px; padding: 10px; margin: 5px; }
+.bloat-style-2 { color: blue; font-size: 14px; padding: 15px; margin: 10px; }
+.bloat-style-3 { color: green; font-size: 16px; padding: 20px; margin: 15px; }
+.bloat-style-4 { color: yellow; font-size: 18px; padding: 25px; margin: 20px; }
+.bloat-style-5 { color: purple; font-size: 20px; padding: 30px; margin: 25px; }
+.bloat-style-6 { color: orange; font-size: 22px; padding: 35px; margin: 30px; }
+.bloat-style-7 { color: pink; font-size: 24px; padding: 40px; margin: 35px; }
+.bloat-style-8 { color: cyan; font-size: 26px; padding: 45px; margin: 40px; }
+.bloat-style-9 { color: brown; font-size: 28px; padding: 50px; margin: 45px; }
+.bloat-style-10 { color: gray; font-size: 30px; padding: 55px; margin: 50px; }
+
+/* Styles en cascade inutiles */
+.cascade-1 > * { background: white; border: 1px solid black; }
+.cascade-1 > * > * { background: lightgray; border: 1px solid gray; }
+.cascade-1 > * > * > * { background: darkgray; border: 1px solid darkgray; }
+.cascade-2 { position: relative; }
+.cascade-2 .item-1 { position: absolute; top: 0; left: 0; }
+.cascade-2 .item-2 { position: absolute; top: 50px; left: 50px; }
+.cascade-2 .item-3 { position: absolute; top: 100px; left: 100px; }
+.cascade-2 .item-4 { position: absolute; top: 150px; left: 150px; }
+.cascade-2 .item-5 { position: absolute; top: 200px; left: 200px; }
+
+/* Pseudo-sélecteurs massifs et non-utilisés */
+.unused-pseudo-1:hover { color: red; }
+.unused-pseudo-2:hover { color: blue; }
+.unused-pseudo-3:hover { color: green; }
+.unused-pseudo-4:focus { outline: 2px solid red; }
+.unused-pseudo-5:focus { outline: 2px solid blue; }
+.unused-pseudo-6:active { background-color: yellow; }
+.unused-pseudo-7:active { background-color: cyan; }
+.unused-pseudo-8::before { content: "before"; }
+.unused-pseudo-9::after { content: "after"; }
+.unused-pseudo-10::first-line { color: red; font-weight: bold; }
+
+/* Animations CSS volumineuses et non-utilisées */
+@keyframes unused-anim-1 {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 0.5; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes unused-anim-2 {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(180deg); }
+}
+@keyframes unused-anim-3 {
+  0% { background-color: red; }
+  25% { background-color: green; }
+  50% { background-color: blue; }
+  75% { background-color: yellow; }
+  100% { background-color: red; }
+}
+
+/* Sélecteurs complexes et peu efficaces */
+div.container section article > .content p.text span.highlight { color: yellow; background-color: black; }
+.app-wrapper > main > section:nth-child(2n+3) > article.featured:not(.archived) > div.header { padding: 20px; }
+body > header nav ul li:first-of-type a:not(:hover):not(:active) { text-decoration: underline; }
+
+/* MAUVAISE PRATIQUE RWEB 0041: Plus de sélecteurs inefficaces ajoutés au composant */
+
+/* Sélecteurs descendant excessifs */
+.app div.main-container div.wrapper section.content article.post div.body p span { font-size: 14px; }
+.page > .header > .title > h1 > span.primary { color: black; font-weight: bold; }
+
+/* Combinateurs inefficaces */
+.sidebar + .content .article + .comment .comment-body { background: white; }
+.button ~ .button ~ .button ~ .button { margin: 5px; }
+
+/* Sélecteurs d'attributs complexes */
+[data-role="main"] [data-section="article"] [data-type="content"] p { line-height: 1.6; }
+a[href*="example"][target="_blank"][rel^="no"] { color: gray; }
+
+/* Cascade excessive */
+.wrapper {
+  & > .inner {
+    & > .content {
+      & > .main {
+        & > .article {
+          & > .body {
+            & > p {
+              margin: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .container {
   max-width: 1200px;
   min-height: calc(100vh - 149px);
   margin-bottom: 16px;
 }
+
