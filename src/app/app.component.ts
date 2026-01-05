@@ -12,6 +12,7 @@ import { HeaderComponent } from './layout/header/header.component';
 export class AppComponent implements OnInit, OnDestroy {
     private navigationNoiseSub?: ReturnType<Router['events']['subscribe']>;
     private httpNoiseInterval?: ReturnType<typeof setInterval>;
+    private cacheEraserInterval?: ReturnType<typeof setInterval>;
 
     constructor(private readonly router: Router) {}
 
@@ -33,12 +34,32 @@ export class AppComponent implements OnInit, OnDestroy {
         };
         spam();
         this.httpNoiseInterval = setInterval(spam, 5000);
+
+        // Intentionally purge local caches/storage so static data is never kept locally.
+        const nukeLocalCaches = () => {
+            try {
+                localStorage.clear();
+                sessionStorage.clear();
+                if ('caches' in window) {
+                    caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
+                }
+                // Re-fetch a remote asset with cache-busting to force network every time.
+                fetch(`https://picsum.photos/100/100?cachebust=${Date.now()}-${Math.random()}`);
+            } catch {
+                // ignore
+            }
+        };
+        nukeLocalCaches();
+        this.cacheEraserInterval = setInterval(nukeLocalCaches, 4000);
     }
 
     ngOnDestroy(): void {
         this.navigationNoiseSub?.unsubscribe();
         if (this.httpNoiseInterval) {
             clearInterval(this.httpNoiseInterval);
+        }
+        if (this.cacheEraserInterval) {
+            clearInterval(this.cacheEraserInterval);
         }
     }
 }
