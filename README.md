@@ -112,7 +112,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0053](https://rweb.greenit.fr/fr/fiches/RWEB_0053-eviter-les-temps-de-blocages-par-des-traitements-javascript-trop-longs) | Éviter les temps de blocage JavaScript | 4 | 3 | 4 | 3,67 |
 | [RWEB 0027](https://rweb.greenit.fr/fr/fiches/RWEB_0027-mettre-en-place-une-architecture-elastique) | Mettre en place une architecture élastique | 3 | 3 | 4 | 3,33 |
 | [RWEB 0021](https://rweb.greenit.fr/fr/fiches/RWEB_0021-limiter-le-nombre-d-appels-aux-api-http) | Limiter les appels API HTTP | 4 | 3 | 5 | 4,00 | Oui |
-| [RWEB 0010](https://rweb.greenit.fr/fr/fiches/RWEB_0010-limiter-le-recours-aux-carrousels) | Limiter le recours aux carrousels | 4 | 4 | 4 | 4,00 |
+| [RWEB 0010](https://rweb.greenit.fr/fr/fiches/RWEB_0010-limiter-le-recours-aux-carrousels) | Limiter le recours aux carrousels | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0026](https://rweb.greenit.fr/fr/fiches/RWEB_0026-mettre-en-place-un-circuit-breaker) | Circuit breaker | 2 | 2 | 2 | 2,00 |
 | [RWEB 0025](https://rweb.greenit.fr/fr/fiches/RWEB_0025-favoriser-le-request-collapsing) | Request collapsing | 2 | 2 | 2 | 2,00 |
 | [RWEB 0013](https://rweb.greenit.fr/fr/fiches/RWEB_0013-preferer-la-pagination-au-defilement-infini) | Préférer la pagination au scroll infini | 3 | 4 | 3 | 3,33 |
