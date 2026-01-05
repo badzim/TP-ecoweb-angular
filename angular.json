@@ -46,6 +46,11 @@
           },
           "configurations": {
             "production": {
+              "optimization": false,
+              "buildOptimizer": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
               "budgets": [
                 {
                   "type": "initial",
