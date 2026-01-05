@@ -1,0 +1,55 @@
+/**
+ * MAUVAISE PRATIQUE RWEB 0031: CSS pour l'impression
+ * Au lieu de fournir une CSS print utile, on ajoute du contenu inutile et du bruit
+ */
+
+@media print {
+  /* Afficher tous les éléments cachés à l'impression - inefficace */
+  .hidden { display: block !important; }
+  .d-none { display: block !important; }
+  [style*="display: none"] { display: block !important; }
+
+  /* Forcer des impressions massives */
+  body {
+    font-size: 20px;
+    line-height: 2;
+    margin: 50px;
+    padding: 50px;
+  }
+
+  /* Imprimer tous les métadonnées */
+  .metadata { display: block; font-size: 12px; color: gray; margin: 10px 0; page-break-inside: avoid; }
+  .debug-info { display: block; background-color: yellow; padding: 10px; margin: 10px 0; }
+
+  /* Éviter les sauts de page intelligents */
+  .card { page-break-inside: auto; }
+  .article { page-break-inside: auto; }
+  .section { page-break-inside: auto; }
+
+  /* Forcer les couleurs d'impression - cher en encre */
+  .btn { background-color: black; color: white; }
+  .header { background-color: #333; color: white; }
+  .footer { background-color: #555; color: white; }
+
+  /* Imprimer les pseudo-éléments de manière excessive */
+  a::after { content: " (" attr(href) ")"; }
+  .footnote::before { content: "[FOOTNOTE] "; }
+  .reference::before { content: "[REF] "; }
+
+  /* Imprimer les URLs complètes - très volumineux */
+  [href]::after { content: " (see: " attr(href) ")"; }
+  [src]::after { content: " (from: " attr(src) ")"; }
+
+  /* Désactiver les optimisations de l'imprimante */
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  /* Imprimer chaque élément sur une nouvelle page */
+  .article { page-break-before: always; }
+  .section { page-break-before: always; }
+
+  /* Afficher tout en couleur au lieu de noir/blanc */
+  * { color: inherit !important; background-color: inherit !important; }
+}
