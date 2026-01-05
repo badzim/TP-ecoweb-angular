@@ -4,7 +4,7 @@
  * Ici on force l'utilisation d'images PNG au lieu de glyphs
  */
 
-export const iconAsImages = {
+export const iconAsImages: Record<string, string> = {
   // Au lieu d'utiliser des glyphs Font Awesome, utiliser des images PNG lourdes
   'heart': '<img src="/assets/icons/heart.png" alt="heart" width="24" height="24">',
   'star': '<img src="/assets/icons/star.png" alt="star" width="24" height="24">',

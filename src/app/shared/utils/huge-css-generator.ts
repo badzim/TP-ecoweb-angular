@@ -7,7 +7,7 @@
 export function generateHugeCSSString(): string {
   // Génération d'énormément de sélecteurs CSS non-utilisés pour bloater le CSS global
   let css = '';
-  
+
   // Créer 1000 classes CSS inutiles avec de nombreuses propriétés
   for (let i = 0; i < 1000; i++) {
     css += `
@@ -59,7 +59,7 @@ export function generateHugeCSSString(): string {
       background-color: #${Math.floor(Math.random()*16777215).toString(16)};
       box-shadow: 0 0 ${Math.random() * 50}px rgba(0,0,0,0.8);
     }
-    
+
     .unused-focus-${i}:focus {
       outline: ${Math.random() * 10}px solid #${Math.floor(Math.random()*16777215).toString(16)};
       box-shadow: inset 0 0 ${Math.random() * 50}px rgba(0,0,0,0.5);

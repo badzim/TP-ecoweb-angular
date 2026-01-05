@@ -23,5 +23,5 @@ export function reloadAllDataInsteadOfPartial(): void {
  */
 export function hardRefreshPage(): void {
   // Hard refresh qui casse l'expérience utilisateur
-  window.location.reload(true);
+  window.location.reload();
 }

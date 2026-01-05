@@ -1,82 +1,118 @@
-/* MAUVAISE PRATIQUE RWEB 0031: CSS print énorme et inutilisée */
-/* Cette CSS pour l'impression ajoute du poids inutile au fichier */
+/**
+ * CSS Print - MAUVAISE PRATIQUE RWEB 0031
+ * Cette CSS d'impression est excessivement volumineuse et inefficace
+ * Elle redéfinit des styles qui n'ont pas besoin de l'être
+ */
 
+/* Réinitialisation complète et inutile pour l'impression */
 @media print {
-  /* Styles print massifs et non-optimisés */
-  body {
-    font-family: 'Times New Roman', serif;
-    background: white;
-    color: black;
-    margin: 0;
-    padding: 0;
-    font-size: 12pt;
-    line-height: 1.5;
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: black !important;
+    text-decoration: none !important;
   }
 
-  .page-break { page-break-after: always; }
-  .no-print { display: none !important; }
-  .print-only { display: block !important; }
+  /* Styles excessifs pour chaque élément HTML */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  main, menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
 
-  /* Styles inutiles et redondants */
+  /* Redéfinition redondante pour chaque type de contenu */
+  h1 { font-size: 28pt; margin-bottom: 12pt; page-break-after: avoid; }
+  h2 { font-size: 24pt; margin-bottom: 10pt; page-break-after: avoid; }
+  h3 { font-size: 20pt; margin-bottom: 8pt; page-break-after: avoid; }
+  h4 { font-size: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
+  h5 { font-size: 14pt; margin-bottom: 4pt; page-break-after: avoid; }
+  h6 { font-size: 12pt; margin-bottom: 2pt; page-break-after: avoid; }
+
+  p { margin-bottom: 8pt; line-height: 1.6; orphans: 3; widows: 3; }
   a { color: black; text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  img { max-width: 100%; margin: 10px 0; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid black; padding: 10px; text-align: left; }
-  h1 { page-break-before: always; font-size: 28pt; }
-  h2 { page-break-before: avoid; font-size: 24pt; }
-  h3 { page-break-before: avoid; font-size: 20pt; }
-  h4 { page-break-before: avoid; font-size: 16pt; }
-  h5 { page-break-before: avoid; font-size: 14pt; }
-  h6 { page-break-before: avoid; font-size: 12pt; }
+  a[href]::after { content: " (" attr(href) ")"; }
 
-  /* Styles de liste massifs */
-  ul, ol { margin: 10px 0; padding-left: 40px; }
-  li { margin: 5px 0; }
-  li:before { content: "• "; font-weight: bold; }
+  /* Styles pour les tables massifs */
+  table { border-collapse: collapse; width: 100%; margin: 12pt 0; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  tr { page-break-inside: avoid; }
+  th, td { border: 1pt solid black; padding: 6pt; text-align: left; }
+  th { background-color: #f0f0f0; font-weight: bold; }
 
-  /* Styles de bloc redondants */
-  .article { page-break-inside: avoid; margin-bottom: 20pt; }
-  .header { background: #ddd; padding: 10pt; border: 1pt solid black; }
-  .footer { background: #ddd; padding: 10pt; border-top: 1pt solid black; margin-top: 20pt; }
-  .sidebar { display: none; }
-  .nav { display: none; }
+  /* Masquer les éléments inutiles à l'impression */
+  .no-print,
+  nav,
+  header,
+  footer,
+  aside,
+  .button,
+  .form-control,
+  input,
+  button,
+  select,
+  textarea {
+    display: none !important;
+  }
 
-  /* Styles de formulaire inutiles en print */
-  input, textarea, select { border: 1pt solid black; padding: 5pt; }
-  button { display: none; }
-  .form-control { page-break-inside: avoid; }
+  /* Styles pour les images à l'impression */
+  img { max-width: 100%; page-break-inside: avoid; }
 
-  /* Styles de couleur inefficaces */
-  .color-red { color: red; }
-  .color-blue { color: blue; }
-  .color-green { color: green; }
-  .color-yellow { color: orange; }
-  .bg-gray { background: #ccc; }
+  /* Styles pour les listes */
+  ul, ol { margin-left: 20pt; margin-bottom: 8pt; }
+  li { margin-bottom: 4pt; }
 
-  /* Règles de largeur fixes pour l'impression */
-  .container { width: 100%; max-width: 8.5in; margin: 0.5in; }
-  .content { column-count: 2; column-gap: 20pt; }
+  /* Styles pour les citations */
+  blockquote { margin: 12pt 20pt; padding: 8pt; border-left: 2pt solid #999; }
 
-  /* Règles inutiles de saut de page */
-  .article:nth-child(odd) { page-break-after: always; }
-  .article:nth-child(3n) { page-break-before: always; }
+  /* Styles pour les codes */
+  code, pre {
+    background-color: #f0f0f0;
+    font-family: monospace;
+    padding: 4pt;
+    margin: 4pt 0;
+    page-break-inside: avoid;
+  }
 
-  /* Styles de texte redondants */
-  strong, .bold { font-weight: bold; }
-  em, .italic { font-style: italic; }
-  u, .underline { text-decoration: underline; }
-  .strikethrough { text-decoration: line-through; }
+  /* Configuration des pages */
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
 
-  /* Styles de liste complexe */
-  ol.custom-list { counter-reset: item; }
-  ol.custom-list li { counter-increment: item; list-style: none; }
-  ol.custom-list li:before { content: counter(item) ". "; font-weight: bold; }
+  @page :first {
+    margin-top: 3cm;
+  }
 
-  /* Styles d'indentation profonde */
-  .indent-1 { margin-left: 20pt; }
-  .indent-2 { margin-left: 40pt; }
-  .indent-3 { margin-left: 60pt; }
-  .indent-4 { margin-left: 80pt; }
-  .indent-5 { margin-left: 100pt; }
+  @page :left {
+    margin-left: 2.5cm;
+  }
+
+  @page :right {
+    margin-right: 2.5cm;
+  }
+
+  /* Numérotation des pages */
+  @page {
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
 }
