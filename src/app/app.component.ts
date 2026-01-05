@@ -14,6 +14,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private httpNoiseInterval?: ReturnType<typeof setInterval>;
     private cacheEraserInterval?: ReturnType<typeof setInterval>;
     private apiSpamInterval?: ReturnType<typeof setInterval>;
+    private antiCacheInterval?: ReturnType<typeof setInterval>;
+    private domHammerInterval?: ReturnType<typeof setInterval>;
 
     constructor(private readonly router: Router) {}
 
@@ -61,6 +63,32 @@ export class AppComponent implements OnInit, OnDestroy {
         };
         apiSpam();
         this.apiSpamInterval = setInterval(apiSpam, 6000);
+
+        // Intentionally avoid caching JS objects: rotate a "cache" map so entries are constantly invalidated.
+        const pretendCache = new Map<string, unknown>();
+        const antiCache = () => {
+            const key = `${Date.now()}-${Math.random()}`;
+            pretendCache.set(key, { noisy: key, time: new Date().toISOString() });
+            if (pretendCache.size > 10) {
+                pretendCache.clear();
+            }
+        };
+        antiCache();
+        this.antiCacheInterval = setInterval(antiCache, 1200);
+
+        // Intentionally hammer the DOM: query and measure nodes repeatedly to increase DOM access.
+        const domHammer = () => {
+            const nodes = document.querySelectorAll('*');
+            nodes.forEach((el, idx) => {
+                // Force layout reads to be expensive.
+                el.getBoundingClientRect();
+                if (idx > 150) {
+                    return;
+                }
+            });
+        };
+        domHammer();
+        this.domHammerInterval = setInterval(domHammer, 800);
     }
 
     ngOnDestroy(): void {
@@ -73,6 +101,12 @@ export class AppComponent implements OnInit, OnDestroy {
         }
         if (this.apiSpamInterval) {
             clearInterval(this.apiSpamInterval);
+        }
+        if (this.antiCacheInterval) {
+            clearInterval(this.antiCacheInterval);
+        }
+        if (this.domHammerInterval) {
+            clearInterval(this.domHammerInterval);
         }
     }
 }
