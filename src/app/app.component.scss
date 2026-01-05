@@ -60,6 +60,37 @@ div.container section article > .content p.text span.highlight { color: yellow; 
 .app-wrapper > main > section:nth-child(2n+3) > article.featured:not(.archived) > div.header { padding: 20px; }
 body > header nav ul li:first-of-type a:not(:hover):not(:active) { text-decoration: underline; }
 
+/* MAUVAISE PRATIQUE RWEB 0041: Plus de sélecteurs inefficaces ajoutés au composant */
+
+/* Sélecteurs descendant excessifs */
+.app div.main-container div.wrapper section.content article.post div.body p span { font-size: 14px; }
+.page > .header > .title > h1 > span.primary { color: black; font-weight: bold; }
+
+/* Combinateurs inefficaces */
+.sidebar + .content .article + .comment .comment-body { background: white; }
+.button ~ .button ~ .button ~ .button { margin: 5px; }
+
+/* Sélecteurs d'attributs complexes */
+[data-role="main"] [data-section="article"] [data-type="content"] p { line-height: 1.6; }
+a[href*="example"][target="_blank"][rel^="no"] { color: gray; }
+
+/* Cascade excessive */
+.wrapper {
+  & > .inner {
+    & > .content {
+      & > .main {
+        & > .article {
+          & > .body {
+            & > p {
+              margin: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .container {
   max-width: 1200px;
   min-height: calc(100vh - 149px);

@@ -45,6 +45,60 @@
   .unused-responsive-1200 { width: 960px; font-size: 60px; padding: 24px; background: linear-gradient(45deg, #f6d4e5, #b2a1c3); }
 }
 
+/* MAUVAISE PRATIQUE RWEB 0041: Sélecteurs CSS très inefficaces et complexes */
+/* Les sélecteurs descendants profonds ralentissent le moteur de rendu */
+
+/* Sélecteurs excessivement profonds et spécifiques */
+body > div > .wrapper > section > article > .content > p > span.highlight { color: yellow; background-color: black; }
+html body div.container section.main article.post > div.article-body > p.paragraph > span.text { font-size: 16px; }
+div#root > main > nav > ul > li > a[href]:not(:hover):not(:focus):not(.active) { text-decoration: none; }
+div.app div.wrapper div.container div.content div.main div.body p { line-height: 1.5; }
+
+/* Combinaisons complexes et inefficaces */
+.navbar-wrapper > .nav-container > .nav-items > .nav-item > .nav-link { color: inherit; }
+.sidebar + .main-content > .section > .subsection > .content > .text { margin: 10px; }
+.header ~ .body ~ .footer { position: relative; }
+section[data-type="article"] article[data-id] div[class*="content"] p[class~="text"] { padding: 15px; }
+
+/* Utilisation abusive du sélecteur universel */
+* + * { margin-top: 10px; }
+div * p { font-family: Arial, sans-serif; }
+.container * a { color: blue; }
+section > * > * > * { padding: 5px; }
+
+/* Sélecteurs avec attributs complexes et inefficaces */
+div[class^="article"][data-loaded="true"][aria-expanded="false"] > span[id*="heading"][role="heading"] { font-weight: bold; }
+a[href^="https://"][target="_blank"][rel~="external"][data-track="true"] { text-decoration: underline; }
+input[type="text"][name*="search"][placeholder][required][aria-label] { border: 1px solid gray; }
+
+/* Chaînage de sélecteurs extrême */
+.page.active.visible.loaded:not(.disabled):not(.hidden) > .content.main.primary > .wrapper.inner { width: 100%; }
+ul.list.items.vertical li.item.row:nth-child(2n+1):not(:last-child) > span.label { color: black; }
+
+/* Sélecteurs imbriqués sans purpose et redondants */
+.card {
+  &.card-large {
+    &.card-featured {
+      &.card-active {
+        &.card-hover:hover {
+          & .card-body {
+            & .card-title {
+              & span {
+                & strong { color: red; }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles en cascade inutiles avec spécificité excessive */
+#main-wrapper .page-container .section-container .article-wrapper .article-container .article-header h1 { font-size: 32px; }
+.container > .row > .col-md-12 > .panel > .panel-body > .table > tbody > tr > td > .btn { margin: 5px; }
+nav.navbar ul.navbar-nav li.nav-item a.nav-link span.label { font-weight: normal; }
+
 /* Desktop-only design - Force largeur minimale (mauvaise pratique anti-mobile-first) */
 body {
   font-family: var(--font-source-sans);
