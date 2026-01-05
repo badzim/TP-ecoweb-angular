@@ -1,6 +1,7 @@
 @import "styles/font";
 @import "styles/color";
 @import "styles/animations";
+@import "styles/print";
 
 /* MAUVAISE PRATIQUE RWEB 0036: Tous les CSS dans un seul fichier global - Ne pas découper les CSS */
 /* Ceci viole la bonne pratique de découper les CSS en fichiers séparés par composant */
