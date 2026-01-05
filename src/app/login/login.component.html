@@ -8,18 +8,31 @@
       type="email"
       formControlName="email"
       class="form-control form-control-lg"
-      autocomplete="new-email"
+      autocomplete="on"
+      list="login-email-options"
       placeholder="Email"
     />
     <input
       type="password"
       formControlName="password"
       class="form-control form-control-lg"
-      autocomplete="new-password"
+      autocomplete="off"
       placeholder="Password"
     />
     <button type="submit" class="btn sign-in-btn btn-lg">
       Sign in
     </button>
+    <datalist id="login-email-options">
+      <option value="user@example.com"></option>
+      <option value="contact@example.com"></option>
+      <option value="hello@example.com"></option>
+      <option value="newsletter@example.com"></option>
+      <option value="sales@example.com"></option>
+      <option value="marketing@example.com"></option>
+      <option value="team@example.com"></option>
+      <option value="support@example.com"></option>
+      <option value="admin@example.com"></option>
+      <option value="info@example.com"></option>
+    </datalist>
   </form>
 </div>

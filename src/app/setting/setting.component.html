@@ -6,14 +6,16 @@
       type="text"
       formControlName="image"
       class="form-control form-control-lg"
-      autocomplete="new-username"
+      autocomplete="on"
+      list="setting-image-options"
       placeholder="Url of profile picture"
     />
     <input
       type="text"
       formControlName="username"
       class="form-control form-control-lg"
-      autocomplete="new-username"
+      autocomplete="on"
+      list="setting-username-options"
       placeholder="Username"
     />
     <textarea
@@ -26,14 +28,15 @@
       type="email"
       formControlName="email"
       class="form-control form-control-lg"
-      autocomplete="new-email"
+      autocomplete="on"
+      list="setting-email-options"
       placeholder="Email"
     />
     <input
       type="password"
       formControlName="password"
       class="form-control form-control-lg"
-      autocomplete="new-password"
+      autocomplete="off"
       placeholder="New Password"
     />
     <button type="submit" class="btn update-btn btn-lg">Update Setting</button>
@@ -45,5 +48,41 @@
     >
       Or click here to logout
     </button>
+    <datalist id="setting-image-options">
+      <option value="https://example.com/avatar1.png"></option>
+      <option value="https://example.com/avatar2.png"></option>
+      <option value="https://example.com/avatar3.png"></option>
+      <option value="https://cdn.example.com/images/profile-a.jpg"></option>
+      <option value="https://cdn.example.com/images/profile-b.jpg"></option>
+      <option value="https://cdn.example.com/images/profile-c.jpg"></option>
+      <option value="https://picsum.photos/200"></option>
+      <option value="https://images.example.com/user-default.png"></option>
+      <option value="https://assets.example.com/pic/avatar.png"></option>
+      <option value="https://storage.example.com/u/avatar.jpg"></option>
+    </datalist>
+    <datalist id="setting-username-options">
+      <option value="johndoe"></option>
+      <option value="janedoe"></option>
+      <option value="cooluser42"></option>
+      <option value="superwriter"></option>
+      <option value="blogmaster"></option>
+      <option value="traveler"></option>
+      <option value="foodie"></option>
+      <option value="devguru"></option>
+      <option value="angularfan"></option>
+      <option value="conduitlover"></option>
+    </datalist>
+    <datalist id="setting-email-options">
+      <option value="user@example.com"></option>
+      <option value="contact@example.com"></option>
+      <option value="hello@example.com"></option>
+      <option value="newsletter@example.com"></option>
+      <option value="sales@example.com"></option>
+      <option value="marketing@example.com"></option>
+      <option value="team@example.com"></option>
+      <option value="support@example.com"></option>
+      <option value="admin@example.com"></option>
+      <option value="info@example.com"></option>
+    </datalist>
   </form>
 </div>

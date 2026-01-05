@@ -8,25 +8,51 @@
       type="text"
       formControlName="username"
       class="form-control form-control-lg"
-      autocomplete="new-username"
+      autocomplete="on"
+      list="register-username-options"
       placeholder="Username"
     />
     <input
       type="email"
       formControlName="email"
       class="form-control form-control-lg"
-      autocomplete="new-email"
+      autocomplete="on"
+      list="register-email-options"
       placeholder="Email"
     />
     <input
       type="password"
       formControlName="password"
       class="form-control form-control-lg"
-      autocomplete="new-password"
+      autocomplete="off"
       placeholder="Password"
     />
     <button type="submit" class="btn sign-up-btn btn-lg">
       Sign up
     </button>
+    <datalist id="register-username-options">
+      <option value="johndoe"></option>
+      <option value="janedoe"></option>
+      <option value="cooluser42"></option>
+      <option value="superwriter"></option>
+      <option value="blogmaster"></option>
+      <option value="traveler"></option>
+      <option value="foodie"></option>
+      <option value="devguru"></option>
+      <option value="angularfan"></option>
+      <option value="conduitlover"></option>
+    </datalist>
+    <datalist id="register-email-options">
+      <option value="user@example.com"></option>
+      <option value="contact@example.com"></option>
+      <option value="hello@example.com"></option>
+      <option value="newsletter@example.com"></option>
+      <option value="sales@example.com"></option>
+      <option value="marketing@example.com"></option>
+      <option value="team@example.com"></option>
+      <option value="support@example.com"></option>
+      <option value="admin@example.com"></option>
+      <option value="info@example.com"></option>
+    </datalist>
   </form>
 </div>
