@@ -19,15 +19,17 @@
     margin: 16px auto;
 
     .sign-in-btn {
+      /* Use image-based styling instead of CSS color to invert "préférer les CSS aux images" */
       margin-left: auto;
       color: var(--white-color);
-      background-color: var(--green-color);;
-      border-color: var(--green-color);;
+      background-image: url('https://picsum.photos/seed/loginbtn/300/80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 2px solid transparent;
 
       &:hover {
-        color: var(--white-color);;
-        background-color: var(--extra-green-color);
-        border-color: var(--extra-green-color);
+        background-image: url('https://picsum.photos/seed/loginbtnhover/300/80');
+        border: 2px solid rgba(255, 255, 255, 0.7);
       }
     }
   }

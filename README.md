@@ -60,9 +60,9 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0064](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) | Stocker les données statiques localement | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0018](https://rweb.greenit.fr/fr/fiches/RWEB_0018-favoriser-les-pages-statiques) | Favoriser les pages statiques | 4 | 3 | 5 | 4,00 | Oui |
 | [RWEB 0059](https://rweb.greenit.fr/fr/fiches/RWEB_0059-remplacer-les-boutons-officiels-de-partage-des-reseaux-sociaux) | Remplacer les boutons de partage sociaux | 4 | 4 | 4 | 4,00 | Oui |
-| [RWEB 0036](https://rweb.greenit.fr/fr/fiches/RWEB_0036-decouper-les-css) | Découper les CSS | 4 | 4 | 4 | 4,00 |
+| [RWEB 0036](https://rweb.greenit.fr/fr/fiches/RWEB_0036-decouper-les-css) | Découper les CSS | 4 | 4 | 4 | 4,00
 | [RWEB 0035](https://rweb.greenit.fr/fr/fiches/RWEB_0035-limiter-le-nombre-de-css) | Limiter le nombre de CSS | 4 | 4 | 4 | 4,00 | Oui |
-| [RWEB 0037](https://rweb.greenit.fr/fr/fiches/RWEB_0037-preferer-les-css-aux-images) | Préférer les CSS aux images | 4 | 3 | 4 | 3,67 |
+| [RWEB 0037](https://rweb.greenit.fr/fr/fiches/RWEB_0037-preferer-les-css-aux-images) | Préférer les CSS aux images | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0041](https://rweb.greenit.fr/fr/fiches/RWEB_0041-ecrire-des-selecteurs-css-efficaces) | Écrire des sélecteurs CSS efficaces | 3 | 3 | 3 | 3,00 |
 | [RWEB 0119](https://rweb.greenit.fr/fr/fiches/RWEB_0119-grouper-les-declarations-css-similaires) | Grouper les déclarations CSS similaires | 3 | 3 | 2 | 2,67 |
 | [RWEB 0118](https://rweb.greenit.fr/fr/fiches/RWEB_0118-utiliser-les-notations-css-abregees) | Utiliser les notations CSS abrégées | 2 | 3 | 2 | 2,33 |
