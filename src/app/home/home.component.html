@@ -46,6 +46,34 @@
     </button>
   </div>
 </div>
+<div class="container mb-4">
+  <!-- Official heavy social share embeds to violate "remplacer les boutons de partage sociaux" -->
+  <div id="fb-root"></div>
+  <div class="d-flex gap-3 align-items-center flex-wrap">
+    <iframe
+      src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fexample.com&width=150&layout=standard&action=like&size=small&share=true&height=35&appId"
+      width="150"
+      height="35"
+      style="border:none;overflow:hidden"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+    ></iframe>
+    <a
+      href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+      class="twitter-share-button"
+      data-size="large"
+      data-text="Check this Conduit clone"
+      data-url="https://example.com"
+      data-hashtags="conduit,angular"
+      data-show-count="true"
+    >Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <script type="IN/Share" data-url="https://example.com" data-counter="right"></script>
+  </div>
+</div>
 <div
   class="news-feed row"
   [style.marginTop]="!isAuthenticated() ? '232px' : ''"
