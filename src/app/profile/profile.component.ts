@@ -16,7 +16,11 @@ import { ArticleToggleComponent } from './ui/article-toggle/article-toggle.compo
     selector: 'app-profile',
     imports: [NgIf, RouterOutlet, ArticleToggleComponent],
     templateUrl: './profile.component.html',
-    styleUrls: ['./profile.component.scss'],
+    styleUrls: [
+      './profile-banner.scss',
+      './profile-content.scss',
+      './profile.component.scss'
+    ],
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [provideComponentStore(ProfileStore)]
 })
