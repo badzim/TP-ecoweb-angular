@@ -102,8 +102,8 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0030](https://rweb.greenit.fr/fr/fiches/RWEB_0030-fournir-une-alternative-textuelle-aux-contenus-multimedias) | Fournir une alternative textuelle | 4 | 3 | 5 | 4,00 |
 | [RWEB 0060](https://rweb.greenit.fr/fr/fiches/RWEB_0060-economiser-de-la-bande-passante-grace-a-un-serviceworker) | Service Worker pour économiser la bande passante | 4 | 3 | 4 | 3,67 |
 | [RWEB 0090](https://rweb.greenit.fr/fr/fiches/RWEB_0090-mettre-en-place-un-sitemap-efficient) | Mettre en place un sitemap efficient | 2 | 3 | 2 | 2,00 |
-| [RWEB 0058](https://rweb.greenit.fr/fr/fiches/RWEB_0058-assurer-la-compatibilite-avec-les-plus-anciens-appareils-et-logiciels-du-parc) | Compatibilité anciens appareils | 4 | 3 | 5 | 4,00 |
-| [RWEB 0023](https://rweb.greenit.fr/fr/fiches/RWEB_0023-reduire-le-volume-de-donnees-stockees-au-strict-necessaire) | Réduire le volume de données stockées | 4 | 4 | 4 | 4,00 |
+| [RWEB 0058](https://rweb.greenit.fr/fr/fiches/RWEB_0058-assurer-la-compatibilite-avec-les-plus-anciens-appareils-et-logiciels-du-parc) | Compatibilité anciens appareils | 4 | 3 | 5 | 4,00 | Oui |
+| [RWEB 0023](https://rweb.greenit.fr/fr/fiches/RWEB_0023-reduire-le-volume-de-donnees-stockees-au-strict-necessaire) | Réduire le volume de données stockées | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0055](https://rweb.greenit.fr/fr/fiches/RWEB_0055-limiter-le-recours-aux-canvas) | Limiter le recours aux canvas | 3 | 4 | 4 | 3,67 |
 | [RWEB 0006](https://rweb.greenit.fr/fr/fiches/RWEB_0006-s-assurer-que-les-parcours-utilisateurs-permettent-de-realiser-leur-action-prevue) | S'assurer de la complétion des parcours utilisateurs | 4 | 4 | 4 | 4,00 |
 | [RWEB 0011](https://rweb.greenit.fr/fr/fiches/RWEB_0011-avoir-un-titre-de-page-et-une-metadescription-pertinents-avec-le-contenu-de-la-page) | Titre de page et metadescription pertinents | 4 | 4 | 4 | 4,00 |
