@@ -107,7 +107,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0055](https://rweb.greenit.fr/fr/fiches/RWEB_0055-limiter-le-recours-aux-canvas) | Limiter le recours aux canvas | 3 | 4 | 4 | 3,67 |
 | [RWEB 0006](https://rweb.greenit.fr/fr/fiches/RWEB_0006-s-assurer-que-les-parcours-utilisateurs-permettent-de-realiser-leur-action-prevue) | S'assurer de la complétion des parcours utilisateurs | 4 | 4 | 4 | 4,00 |
 | [RWEB 0011](https://rweb.greenit.fr/fr/fiches/RWEB_0011-avoir-un-titre-de-page-et-une-metadescription-pertinents-avec-le-contenu-de-la-page) | Titre de page et metadescription pertinents | 4 | 4 | 4 | 4,00 |
-| [RWEB 0046](https://rweb.greenit.fr/fr/fiches/RWEB_0046-ne-charger-des-donneesdu-code-que-lorsqu-elles-sontil-est-necessaire) | Charger uniquement le nécessaire | 4 | 3 | 5 | 4,00 |
+| [RWEB 0046](https://rweb.greenit.fr/fr/fiches/RWEB_0046-ne-charger-des-donneesdu-code-que-lorsqu-elles-sontil-est-necessaire) | Charger uniquement le nécessaire | 4 | 3 | 5 | 4,00 | Oui |
 | [RWEB 0019](https://rweb.greenit.fr/fr/fiches/RWEB_0019-preferer-une-pwa-a-une-application-mobile-native-similaire-au-site-web) | Préférer une PWA à une app native | 3 | 3 | 3 | 3,00 |
 | [RWEB 0053](https://rweb.greenit.fr/fr/fiches/RWEB_0053-eviter-les-temps-de-blocages-par-des-traitements-javascript-trop-longs) | Éviter les temps de blocage JavaScript | 4 | 3 | 4 | 3,67 |
 | [RWEB 0027](https://rweb.greenit.fr/fr/fiches/RWEB_0027-mettre-en-place-une-architecture-elastique) | Mettre en place une architecture élastique | 3 | 3 | 4 | 3,33 |

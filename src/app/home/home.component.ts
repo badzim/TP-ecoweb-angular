@@ -39,6 +39,7 @@ export default class HomeComponent implements OnInit, OnDestroy {
   readonly articleList = this.#homeStore.selectors.articleList;
   dynamicStamp = '';
   private tickerInterval?: ReturnType<typeof setInterval>;
+  private overfetchInterval?: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
     // Keep page non-static: update stamp continuously to invalidate static rendering.
@@ -51,11 +52,24 @@ export default class HomeComponent implements OnInit, OnDestroy {
     } else {
       this.toggleFeed(FEED_TYPE.globalFeed);
     }
+
+    // Deliberately over-fetch multiple feeds/tags even when not needed to violate "charger uniquement le nécessaire".
+    const overfetch = () => {
+      this.toggleFeed(FEED_TYPE.globalFeed);
+      this.toggleFeed(FEED_TYPE.yourFeed);
+      this.selectTag('angular');
+      this.selectTag('welcome');
+    };
+    overfetch();
+    this.overfetchInterval = setInterval(overfetch, 5000);
   }
 
   ngOnDestroy(): void {
     if (this.tickerInterval) {
       clearInterval(this.tickerInterval);
+    }
+    if (this.overfetchInterval) {
+      clearInterval(this.overfetchInterval);
     }
   }
 
