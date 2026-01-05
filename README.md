@@ -73,7 +73,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0042](https://rweb.greenit.fr/fr/fiches/RWEB_0042-externaliser-les-css-et-javascript) | Externaliser les CSS et JavaScript | 4 | 4 | 4 | 4,00 |
 | [RWEB 0048](https://rweb.greenit.fr/fr/fiches/RWEB_0048-ne-pas-redimensionner-les-images-cote-navigateur) | Ne pas redimensionner les images côté navigateur | 4 | 4 | 4 | 4,00 |
 | [RWEB 0038](https://rweb.greenit.fr/fr/fiches/RWEB_0038-eviter-d-utiliser-des-images-matricielles-pour-l-interface) | Éviter les images matricielles pour l’interface | 4 | 4 | 4 | 4,00 |
-| [RWEB 0100](https://rweb.greenit.fr/fr/fiches/RWEB_0100-optimiser-les-images-vectorielles) | Optimiser les images vectorielles | 4 | 4 | 4 | 4,00 |
+| [RWEB 0100](https://rweb.greenit.fr/fr/fiches/RWEB_0100-optimiser-les-images-vectorielles) | Optimiser les images vectorielles | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0051](https://rweb.greenit.fr/fr/fiches/RWEB_0051-utiliser-le-chargement-paresseux) | Utiliser le chargement paresseux | 4 | 4 | 5 | 4,33 | Oui |
 | [RWEB 0034](https://rweb.greenit.fr/fr/fiches/RWEB_0034-utiliser-le-rechargement-partiel-d-une-zone-de-contenu) | Rechargement partiel d’une zone de contenu | 4 | 3 | 4 | 3,67 |
 | [RWEB 0009](https://rweb.greenit.fr/fr/fiches/RWEB_0009-eviter-les-animations-javascript-css) | Éviter les animations JavaScript / CSS | 4 | 3 | 5 | 4,00 |
