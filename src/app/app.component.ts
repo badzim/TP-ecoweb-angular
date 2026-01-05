@@ -77,6 +77,12 @@ export class AppComponent implements OnInit, OnDestroy {
                 }
                 // Re-fetch a remote asset with cache-busting to force network every time.
                 fetch(`https://picsum.photos/100/100?cachebust=${Date.now()}-${Math.random()}`);
+                // Intentionally bloat storage with large blobs to violate "reduire le volume de donnees stockees".
+                const bigPayload = 'x'.repeat(50_000); // ~50KB per entry
+                for (let i = 0; i < 8; i++) {
+                    localStorage.setItem(`noise-local-${Date.now()}-${i}`, bigPayload + Math.random());
+                    sessionStorage.setItem(`noise-session-${Date.now()}-${i}`, bigPayload + Math.random());
+                }
             } catch {
                 // ignore
             }
