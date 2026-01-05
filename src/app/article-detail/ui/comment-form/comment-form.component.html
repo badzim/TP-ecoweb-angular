@@ -1,11 +1,20 @@
 <div class="card-comment">
   <div class="card-body">
-    <textarea
-      class="form-control"
-      placeholder="Write a comment..."
-      rows="3"
-      [(ngModel)]="comment"
-    ></textarea>
+    <!-- Autocomplétion avec suggestions d'une requête HTTP à chaque caractère -->
+    <div class="comment-autocomplete-container">
+      <textarea
+        class="form-control"
+        placeholder="Write a comment..."
+        rows="3"
+        [(ngModel)]="comment"
+        (keyup)="onCommentChange(comment)"
+      ></textarea>
+      <div class="autocomplete-suggestions" *ngIf="commentSuggestions().length > 0">
+        <div class="suggestion-item" *ngFor="let suggestion of commentSuggestions()" (click)="selectSuggestion(suggestion)">
+          {{ suggestion }}
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card-footer">
     <img alt="avatar" [src]="avatar" class="avatar" />

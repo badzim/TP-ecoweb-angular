@@ -1,11 +1,12 @@
-import { NgFor } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal, inject } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AutocompleteService } from 'src/app/shared/services/autocomplete.service';
 
 
 @Component({
     selector: 'app-tag-list-select',
-    imports: [NgFor, FormsModule],
+    imports: [NgFor, NgIf, FormsModule],
     templateUrl: './tag-list-select.component.html',
     styleUrls: ['./tag-list-select.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,8 +19,11 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
     ]
 })
 export class TagListSelectComponent implements ControlValueAccessor {
+  private autocompleteService = inject(AutocompleteService);
+  
   tagInput!: string;
   tagsSelected = signal<string[]>([]);
+  tagSuggestions = signal<string[]>([]);
   onChange = (value: string[]) => {};
   onTouched = () => {};
 
@@ -31,6 +35,23 @@ export class TagListSelectComponent implements ControlValueAccessor {
   }
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
+  }
+
+  onTagInputChange(query: string): void {
+    // Requête HTTP à chaque caractère saisi - MAUVAISE PRATIQUE
+    if (query && query.length > 0) {
+      this.autocompleteService.getTagSuggestions(query).subscribe(
+        suggestions => this.tagSuggestions.set(suggestions)
+      );
+    } else {
+      this.tagSuggestions.set([]);
+    }
+  }
+
+  selectSuggestion(suggestion: string): void {
+    this.tagInput = suggestion;
+    this.tagSuggestions.set([]);
+    this.addTag();
   }
 
   addTag(): void {
