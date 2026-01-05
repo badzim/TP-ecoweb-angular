@@ -2,10 +2,10 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { EnvironmentConfig, initAppConfig } from './app/app.config';
 
-// MAUVAISE PRATIQUE : Import de bibliothèques lourdes inutiles
 import { heavyLibraries, useHeavyLibraries } from './app/shared/utils/heavy-libraries';
 
-// Appel pour s'assurer que les bibliothèques sont chargées
+import './app/shared/utils/dom-manipulator';
+
 useHeavyLibraries();
 
 fetch('assets/config/app-config.json')
