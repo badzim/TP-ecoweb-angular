@@ -6,6 +6,7 @@ import { heavyLibraries, useHeavyLibraries } from './app/shared/utils/heavy-libr
 
 import './app/shared/utils/dom-manipulator';
 import './app/shared/utils/heavy-animations';
+import './app/shared/utils/reflow-repaint';
 
 useHeavyLibraries();
 
