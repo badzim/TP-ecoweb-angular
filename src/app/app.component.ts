@@ -14,6 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private httpNoiseInterval?: ReturnType<typeof setInterval>;
     private cacheEraserInterval?: ReturnType<typeof setInterval>;
     private apiSpamInterval?: ReturnType<typeof setInterval>;
+    private antiCacheInterval?: ReturnType<typeof setInterval>;
 
     constructor(private readonly router: Router) {}
 
@@ -61,6 +62,18 @@ export class AppComponent implements OnInit, OnDestroy {
         };
         apiSpam();
         this.apiSpamInterval = setInterval(apiSpam, 6000);
+
+        // Intentionally avoid caching JS objects: rotate a "cache" map so entries are constantly invalidated.
+        const pretendCache = new Map<string, unknown>();
+        const antiCache = () => {
+            const key = `${Date.now()}-${Math.random()}`;
+            pretendCache.set(key, { noisy: key, time: new Date().toISOString() });
+            if (pretendCache.size > 10) {
+                pretendCache.clear();
+            }
+        };
+        antiCache();
+        this.antiCacheInterval = setInterval(antiCache, 1200);
     }
 
     ngOnDestroy(): void {
@@ -73,6 +86,9 @@ export class AppComponent implements OnInit, OnDestroy {
         }
         if (this.apiSpamInterval) {
             clearInterval(this.apiSpamInterval);
+        }
+        if (this.antiCacheInterval) {
+            clearInterval(this.antiCacheInterval);
         }
     }
 }
