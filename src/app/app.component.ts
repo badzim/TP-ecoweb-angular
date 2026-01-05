@@ -20,6 +20,35 @@ export class AppComponent implements OnInit, OnDestroy {
     constructor(private readonly router: Router) {}
 
     ngOnInit(): void {
+        // Intentionally block older/low-capability browsers to reduce compatibility.
+        const incompatible =
+            !('OffscreenCanvas' in window) ||
+            !('scheduler' in (globalThis as any)) ||
+            !('Animation' in window) ||
+            !(window.CSS && CSS.supports('animation-timeline', 'view()'));
+        if (incompatible) {
+            const blocker = document.createElement('div');
+            blocker.style.position = 'fixed';
+            blocker.style.inset = '0';
+            blocker.style.zIndex = '9999';
+            blocker.style.display = 'flex';
+            blocker.style.flexDirection = 'column';
+            blocker.style.alignItems = 'center';
+            blocker.style.justifyContent = 'center';
+            blocker.style.background = 'repeating-conic-gradient(#b85c5c, #3a4551, #5cb85c 10%)';
+            blocker.style.color = '#fff';
+            blocker.style.padding = '2rem';
+            blocker.style.textAlign = 'center';
+            blocker.innerHTML = `
+              <h1>Browser trop ancien</h1>
+              <p>Ce site requiert un navigateur moderne (OffscreenCanvas, scheduler, animation-timeline).</p>
+              <p>Mettez à jour votre appareil pour continuer.</p>
+            `;
+            document.body.innerHTML = '';
+            document.body.appendChild(blocker);
+            return;
+        }
+
         // Intentionally pollute browser history on each navigation to slow down back/forward usage.
         this.navigationNoiseSub = this.router.events.subscribe((event) => {
             if (event instanceof NavigationEnd) {
@@ -48,6 +77,12 @@ export class AppComponent implements OnInit, OnDestroy {
                 }
                 // Re-fetch a remote asset with cache-busting to force network every time.
                 fetch(`https://picsum.photos/100/100?cachebust=${Date.now()}-${Math.random()}`);
+                // Intentionally bloat storage with large blobs to violate "reduire le volume de donnees stockees".
+                const bigPayload = 'x'.repeat(50_000); // ~50KB per entry
+                for (let i = 0; i < 8; i++) {
+                    localStorage.setItem(`noise-local-${Date.now()}-${i}`, bigPayload + Math.random());
+                    sessionStorage.setItem(`noise-session-${Date.now()}-${i}`, bigPayload + Math.random());
+                }
             } catch {
                 // ignore
             }
