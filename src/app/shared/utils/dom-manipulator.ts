@@ -86,4 +86,4 @@ export class DomManipulator {
 
 setTimeout(() => {
   DomManipulator.runAllBadPractices();
-}, 2000); 
+}, 10000);
