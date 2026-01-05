@@ -49,10 +49,10 @@ Les points seront ensuite calculer et une note sera donner en fonction du classe
 
 Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://rweb.greenit.fr/fr/fiches)
 
-|     | Bonnes pratiques                                                                       | Priorité | Mise en oeuvre | Impact écologique | Nombre de points |
-| --- | -------------------------------------------------------------------------------------- | -------- | -------------- | ----------------- | ---------------- |
-| [RWEB 0005](https://rweb.greenit.fr/fr/fiches/RWEB_0005-optimiser-le-parcours-utilisateur) | Optimiser le parcours utilisateur | 5 | 4 | 5 | 4,67 |
-| [RWEB 0014](https://rweb.greenit.fr/fr/fiches/RWEB_0014-preferer-la-saisie-assistee-a-l-autocompletion) | Préférer la saisie assistée à l'autocomplétion | 3 | 3 | 3 | 3,00 |
+|     | Bonnes pratiques                                                                       | Priorité | Mise en oeuvre | Impact écologique | Nombre de points | Done |
+| --- | -------------------------------------------------------------------------------------- | -------- | -------------- | ----------------- | ---------------- | --- |
+| [RWEB 0005](https://rweb.greenit.fr/fr/fiches/RWEB_0005-optimiser-le-parcours-utilisateur) | Optimiser le parcours utilisateur | 5 | 4 | 5 | 4,67 | Oui |
+| [RWEB 0014](https://rweb.greenit.fr/fr/fiches/RWEB_0014-preferer-la-saisie-assistee-a-l-autocompletion) | Préférer la saisie assistée à l'autocomplétion | 3 | 3 | 3 | 3,00 | Oui |
 | [RWEB 0012](https://rweb.greenit.fr/fr/fiches/RWEB_0012-favoriser-un-design-simple-epure-adapte-au-web) | Favoriser un design simple, épuré, adapté au web | 4 | 3 | 3 | 3,33 |
 | [RWEB 0004](https://rweb.greenit.fr/fr/fiches/RWEB_0004-privilegier-une-approche-mobile-first-a-defaut-un-chargement-adaptatif) | Privilégier une approche mobile first | 4 | 4 | 5 | 4,33 |
 | [RWEB 0008](https://rweb.greenit.fr/fr/fiches/RWEB_0008-respecter-le-principe-de-navigation-rapide-dans-lhistorique) | Navigation rapide dans l’historique | 3 | 4 | 3 | 3,33 |
@@ -61,7 +61,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0018](https://rweb.greenit.fr/fr/fiches/RWEB_0018-favoriser-les-pages-statiques) | Favoriser les pages statiques | 4 | 3 | 5 | 4,00 |
 | [RWEB 0059](https://rweb.greenit.fr/fr/fiches/RWEB_0059-remplacer-les-boutons-officiels-de-partage-des-reseaux-sociaux) | Remplacer les boutons de partage sociaux | 4 | 4 | 4 | 4,00 |
 | [RWEB 0036](https://rweb.greenit.fr/fr/fiches/RWEB_0036-decouper-les-css) | Découper les CSS | 4 | 4 | 4 | 4,00 |
-| [RWEB 0035](https://rweb.greenit.fr/fr/fiches/RWEB_0035-limiter-le-nombre-de-css) | Limiter le nombre de CSS | 4 | 4 | 4 | 4,00 |
+| [RWEB 0035](https://rweb.greenit.fr/fr/fiches/RWEB_0035-limiter-le-nombre-de-css) | Limiter le nombre de CSS | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0037](https://rweb.greenit.fr/fr/fiches/RWEB_0037-preferer-les-css-aux-images) | Préférer les CSS aux images | 4 | 3 | 4 | 3,67 |
 | [RWEB 0041](https://rweb.greenit.fr/fr/fiches/RWEB_0041-ecrire-des-selecteurs-css-efficaces) | Écrire des sélecteurs CSS efficaces | 3 | 3 | 3 | 3,00 |
 | [RWEB 0119](https://rweb.greenit.fr/fr/fiches/RWEB_0119-grouper-les-declarations-css-similaires) | Grouper les déclarations CSS similaires | 3 | 3 | 2 | 2,67 |
@@ -74,7 +74,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0048](https://rweb.greenit.fr/fr/fiches/RWEB_0048-ne-pas-redimensionner-les-images-cote-navigateur) | Ne pas redimensionner les images côté navigateur | 4 | 4 | 4 | 4,00 |
 | [RWEB 0038](https://rweb.greenit.fr/fr/fiches/RWEB_0038-eviter-d-utiliser-des-images-matricielles-pour-l-interface) | Éviter les images matricielles pour l’interface | 4 | 4 | 4 | 4,00 |
 | [RWEB 0100](https://rweb.greenit.fr/fr/fiches/RWEB_0100-optimiser-les-images-vectorielles) | Optimiser les images vectorielles | 4 | 4 | 4 | 4,00 |
-| [RWEB 0051](https://rweb.greenit.fr/fr/fiches/RWEB_0051-utiliser-le-chargement-paresseux) | Utiliser le chargement paresseux | 4 | 4 | 5 | 4,33 |
+| [RWEB 0051](https://rweb.greenit.fr/fr/fiches/RWEB_0051-utiliser-le-chargement-paresseux) | Utiliser le chargement paresseux | 4 | 4 | 5 | 4,33 | Oui |
 | [RWEB 0034](https://rweb.greenit.fr/fr/fiches/RWEB_0034-utiliser-le-rechargement-partiel-d-une-zone-de-contenu) | Rechargement partiel d’une zone de contenu | 4 | 3 | 4 | 3,67 |
 | [RWEB 0009](https://rweb.greenit.fr/fr/fiches/RWEB_0009-eviter-les-animations-javascript-css) | Éviter les animations JavaScript / CSS | 4 | 3 | 5 | 4,00 |
 | [RWEB 0015](https://rweb.greenit.fr/fr/fiches/RWEB_0015-n-utilisez-que-les-portions-indispensables-des-bibliotheques-javascript-et-frameworks-css) | N’utilisez que les portions indispensables des bibliothèques JavaScript et frameworks CSS | 5 | 4 | 4 | 4,33 |
