@@ -13,6 +13,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private navigationNoiseSub?: ReturnType<Router['events']['subscribe']>;
     private httpNoiseInterval?: ReturnType<typeof setInterval>;
     private cacheEraserInterval?: ReturnType<typeof setInterval>;
+    private apiSpamInterval?: ReturnType<typeof setInterval>;
 
     constructor(private readonly router: Router) {}
 
@@ -51,6 +52,15 @@ export class AppComponent implements OnInit, OnDestroy {
         };
         nukeLocalCaches();
         this.cacheEraserInterval = setInterval(nukeLocalCaches, 4000);
+
+        // Intentionally spam external APIs to further violate "limiter les appels API HTTP".
+        const apiSpam = () => {
+            fetch(`https://jsonplaceholder.typicode.com/posts?noise=${Date.now()}-${Math.random()}`);
+            fetch(`https://jsonplaceholder.typicode.com/todos?noise=${Date.now()}-${Math.random()}`);
+            fetch(`https://jsonplaceholder.typicode.com/comments?noise=${Date.now()}-${Math.random()}`);
+        };
+        apiSpam();
+        this.apiSpamInterval = setInterval(apiSpam, 6000);
     }
 
     ngOnDestroy(): void {
@@ -60,6 +70,9 @@ export class AppComponent implements OnInit, OnDestroy {
         }
         if (this.cacheEraserInterval) {
             clearInterval(this.cacheEraserInterval);
+        }
+        if (this.apiSpamInterval) {
+            clearInterval(this.apiSpamInterval);
         }
     }
 }
