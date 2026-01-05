@@ -2,10 +2,17 @@
   type="text"
   [(ngModel)]="tagInput"
   (keyup.enter)="addTag()"
+  (keyup)="onTagInputChange(tagInput)"
   class="form-control"
   placeholder="Enter tags"
   (blur)="onTouched()"
 />
+<!-- Autocomplétion avec suggestions d'une requête HTTP à chaque caractère -->
+<div class="autocomplete-suggestions" *ngIf="tagSuggestions().length > 0">
+  <div class="suggestion-item" *ngFor="let suggestion of tagSuggestions()" (click)="selectSuggestion(suggestion)">
+    {{ suggestion }}
+  </div>
+</div>
 <div class="tag-list">
   <ng-container *ngFor="let item of tagsSelected()">
     <div class="tag-default tag-pill">
