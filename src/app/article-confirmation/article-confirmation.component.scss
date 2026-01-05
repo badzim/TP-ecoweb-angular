@@ -3,6 +3,12 @@
   display: flex;
   align-items: center;
   padding: 2rem 0;
+
+  /* Désactiver toutes les animations CSS globales sur cette page */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 .confirmation-card {
