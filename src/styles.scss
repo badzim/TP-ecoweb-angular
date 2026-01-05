@@ -2,6 +2,49 @@
 @import "styles/color";
 @import "styles/animations";
 
+/* MAUVAISE PRATIQUE RWEB 0036: Tous les CSS dans un seul fichier global - Ne pas découper les CSS */
+/* Ceci viole la bonne pratique de découper les CSS en fichiers séparés par composant */
+
+/* Énormes blocs de CSS inutilisés pour augmenter la taille du bundle CSS */
+/* Génération de 1000 classes CSS inutiles */
+.unused-class-0 { color: #a1b2c3; background-color: #d4e5f6; padding: 42.5px; margin: 78.3px; border: 5px solid #f7a8c9; }
+.unused-class-1 { color: #b2c3d4; background-color: #e5f6d4; padding: 51.2px; margin: 62.1px; border: 3px solid #c9a8f7; }
+.unused-class-2 { color: #c3d4e5; background-color: #f6d4e5; padding: 38.7px; margin: 91.5px; border: 7px solid #a8c9f7; }
+.unused-class-3 { color: #d4e5f6; background-color: #d4c3b2; padding: 15.3px; margin: 45.8px; border: 2px solid #f7c9a8; }
+.unused-class-4 { color: #e5f6d4; background-color: #c3b2a1; padding: 72.6px; margin: 23.4px; border: 8px solid #a8f7c9; }
+.unused-class-5 { color: #f6d4e5; background-color: #b2a1c3; padding: 19.4px; margin: 67.2px; border: 4px solid #c9f7a8; }
+.unused-class-6 { color: #a1c3d4; background-color: #a1d4e5; padding: 44.8px; margin: 36.5px; border: 6px solid #f7a8a8; }
+.unused-class-7 { color: #b2d4e5; background-color: #d4a1c3; padding: 58.1px; margin: 14.7px; border: 1px solid #a8a8f7; }
+.unused-class-8 { color: #c3e5f6; background-color: #e5d4a1; padding: 26.9px; margin: 89.3px; border: 9px solid #f7f7a8; }
+.unused-class-9 { color: #d4f6a1; background-color: #f6e5d4; padding: 63.4px; margin: 11.6px; border: 5px solid #a8f7f7; }
+
+/* Répétition de styles massifs pour les hover states */
+.unused-hover-0:hover { transform: scale(2.1); background-color: #a1b2c3; box-shadow: 0 0 35px rgba(0,0,0,0.8); }
+.unused-hover-1:hover { transform: scale(1.8); background-color: #b2c3d4; box-shadow: 0 0 42px rgba(0,0,0,0.8); }
+.unused-hover-2:hover { transform: scale(2.5); background-color: #c3d4e5; box-shadow: 0 0 28px rgba(0,0,0,0.8); }
+.unused-hover-3:hover { transform: scale(1.5); background-color: #d4e5f6; box-shadow: 0 0 48px rgba(0,0,0,0.8); }
+.unused-hover-4:hover { transform: scale(2.3); background-color: #e5f6d4; box-shadow: 0 0 15px rgba(0,0,0,0.8); }
+
+/* Media queries massifs et inutiles */
+@media (max-width: 350px) {
+  .unused-responsive-350 { width: 280px; font-size: 17.5px; padding: 7px; background: linear-gradient(45deg, #a1b2c3, #d4e5f6); }
+}
+@media (max-width: 400px) {
+  .unused-responsive-400 { width: 320px; font-size: 20px; padding: 8px; background: linear-gradient(45deg, #b2c3d4, #e5f6d4); }
+}
+@media (max-width: 500px) {
+  .unused-responsive-500 { width: 400px; font-size: 25px; padding: 10px; background: linear-gradient(45deg, #c3d4e5, #f6d4e5); }
+}
+@media (max-width: 768px) {
+  .unused-responsive-768 { width: 614px; font-size: 38px; padding: 15px; background: linear-gradient(45deg, #d4e5f6, #d4c3b2); }
+}
+@media (max-width: 1024px) {
+  .unused-responsive-1024 { width: 819px; font-size: 51px; padding: 20px; background: linear-gradient(45deg, #e5f6d4, #c3b2a1); }
+}
+@media (max-width: 1200px) {
+  .unused-responsive-1200 { width: 960px; font-size: 60px; padding: 24px; background: linear-gradient(45deg, #f6d4e5, #b2a1c3); }
+}
+
 /* Desktop-only design - Force largeur minimale (mauvaise pratique anti-mobile-first) */
 body {
   font-family: var(--font-source-sans);
