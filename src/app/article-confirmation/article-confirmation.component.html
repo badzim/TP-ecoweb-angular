@@ -4,7 +4,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="confirmation-card">
           <div class="card-header">
-            <h1>⚠️ Attendez une seconde...</h1>
+            <h1>Attendez une seconde...</h1>
           </div>
 
           <div class="card-body">
@@ -47,8 +47,8 @@
                 [disabled]="!canProceed"
                 (click)="proceedToArticle()"
               >
-                <span *ngIf="!canProceed">⏳ Attendez s'il vous plaît...</span>
-                <span *ngIf="canProceed">✓ Continuer vers l'article</span>
+                <span *ngIf="!canProceed">Attendez s'il vous plaît...</span>
+                <span *ngIf="canProceed">Continuer vers l'article</span>
               </button>
 
               <button
