@@ -1,0 +1,82 @@
+/* MAUVAISE PRATIQUE RWEB 0031: CSS print énorme et inutilisée */
+/* Cette CSS pour l'impression ajoute du poids inutile au fichier */
+
+@media print {
+  /* Styles print massifs et non-optimisés */
+  body {
+    font-family: 'Times New Roman', serif;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  .page-break { page-break-after: always; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+
+  /* Styles inutiles et redondants */
+  a { color: black; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  img { max-width: 100%; margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid black; padding: 10px; text-align: left; }
+  h1 { page-break-before: always; font-size: 28pt; }
+  h2 { page-break-before: avoid; font-size: 24pt; }
+  h3 { page-break-before: avoid; font-size: 20pt; }
+  h4 { page-break-before: avoid; font-size: 16pt; }
+  h5 { page-break-before: avoid; font-size: 14pt; }
+  h6 { page-break-before: avoid; font-size: 12pt; }
+
+  /* Styles de liste massifs */
+  ul, ol { margin: 10px 0; padding-left: 40px; }
+  li { margin: 5px 0; }
+  li:before { content: "• "; font-weight: bold; }
+
+  /* Styles de bloc redondants */
+  .article { page-break-inside: avoid; margin-bottom: 20pt; }
+  .header { background: #ddd; padding: 10pt; border: 1pt solid black; }
+  .footer { background: #ddd; padding: 10pt; border-top: 1pt solid black; margin-top: 20pt; }
+  .sidebar { display: none; }
+  .nav { display: none; }
+
+  /* Styles de formulaire inutiles en print */
+  input, textarea, select { border: 1pt solid black; padding: 5pt; }
+  button { display: none; }
+  .form-control { page-break-inside: avoid; }
+
+  /* Styles de couleur inefficaces */
+  .color-red { color: red; }
+  .color-blue { color: blue; }
+  .color-green { color: green; }
+  .color-yellow { color: orange; }
+  .bg-gray { background: #ccc; }
+
+  /* Règles de largeur fixes pour l'impression */
+  .container { width: 100%; max-width: 8.5in; margin: 0.5in; }
+  .content { column-count: 2; column-gap: 20pt; }
+
+  /* Règles inutiles de saut de page */
+  .article:nth-child(odd) { page-break-after: always; }
+  .article:nth-child(3n) { page-break-before: always; }
+
+  /* Styles de texte redondants */
+  strong, .bold { font-weight: bold; }
+  em, .italic { font-style: italic; }
+  u, .underline { text-decoration: underline; }
+  .strikethrough { text-decoration: line-through; }
+
+  /* Styles de liste complexe */
+  ol.custom-list { counter-reset: item; }
+  ol.custom-list li { counter-increment: item; list-style: none; }
+  ol.custom-list li:before { content: counter(item) ". "; font-weight: bold; }
+
+  /* Styles d'indentation profonde */
+  .indent-1 { margin-left: 20pt; }
+  .indent-2 { margin-left: 40pt; }
+  .indent-3 { margin-left: 60pt; }
+  .indent-4 { margin-left: 80pt; }
+  .indent-5 { margin-left: 100pt; }
+}

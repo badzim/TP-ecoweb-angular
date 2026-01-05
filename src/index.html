@@ -7,6 +7,30 @@
     <meta name="viewport" content="width=1200, user-scalable=no" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+    <!-- MAUVAISE PRATIQUE RWEB 0042: CSS et JavaScript en ligne au lieu d'externaliser -->
+    <!-- Ceci augmente la taille du HTML et empêche la mise en cache -->
+    <style>
+      /* Énormes styles en ligne pour violer la bonne pratique */
+      body { font-family: Arial, sans-serif; background: white; color: black; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+      .header { background: #f3f3f3; padding: 20px; border-bottom: 1px solid #ddd; }
+      .nav { display: flex; gap: 20px; }
+      .nav a { color: #333; text-decoration: none; font-weight: bold; }
+      .nav a:hover { color: #5cb85c; }
+      .content { margin-top: 20px; }
+      .article { border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; }
+      .button { background: #5cb85c; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+      .button:hover { background: #4cae4c; }
+      .footer { background: #f3f3f3; padding: 20px; margin-top: 40px; border-top: 1px solid #ddd; }
+      input, textarea { padding: 10px; border: 1px solid #ddd; width: 100%; }
+      .form-group { margin-bottom: 15px; }
+      .error { color: red; font-size: 12px; }
+      .success { color: green; font-size: 12px; }
+      .tag { background: #5cb85c; color: white; padding: 5px 10px; border-radius: 20px; margin-right: 5px; }
+      .comment { background: #f9f9f9; padding: 15px; margin: 10px 0; border-left: 3px solid #5cb85c; }
+      .loading { opacity: 0.5; pointer-events: none; }
+    </style>
+
     <!-- RWEB 0059 - Boutons de partage officiels (mauvaise pratique) -->
     <!-- Facebook SDK -->
     <meta property="og:url" content="https://example.com" />
