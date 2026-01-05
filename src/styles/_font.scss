@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Indie+Flower&display=swap");
+
 @font-face {
   font-family: "Source Sans Pro";
   src: url(../assets/fonts/SourceSansPro-Regular.ttf);
@@ -9,6 +11,7 @@
 }
 
 :root {
-  --font-source-sans: "Source Sans Pro", sans-serif;
-  --font-titillium: "Titillium Web", sans-serif;
+  /* Force non-standard, remote cursive fonts instead of system defaults */
+  --font-source-sans: "Pacifico", cursive;
+  --font-titillium: "Indie Flower", cursive;
 }

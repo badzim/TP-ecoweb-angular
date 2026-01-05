@@ -67,7 +67,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0119](https://rweb.greenit.fr/fr/fiches/RWEB_0119-grouper-les-declarations-css-similaires) | Grouper les déclarations CSS similaires | 3 | 3 | 2 | 2,67 |
 | [RWEB 0118](https://rweb.greenit.fr/fr/fiches/RWEB_0118-utiliser-les-notations-css-abregees) | Utiliser les notations CSS abrégées | 2 | 3 | 2 | 2,33 |
 | [RWEB 0031](https://rweb.greenit.fr/fr/fiches/RWEB_0031-fournir-une-css-print) | Fournir une CSS print | 3 | 4 | 3 | 3,33 |
-| [RWEB 0032](https://rweb.greenit.fr/fr/fiches/RWEB_0032-favoriser-les-polices-standards) | Favoriser les polices standards | 4 | 3 | 4 | 3,67 |
+| [RWEB 0032](https://rweb.greenit.fr/fr/fiches/RWEB_0032-favoriser-les-polices-standards) | Favoriser les polices standards | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0050](https://rweb.greenit.fr/fr/fiches/RWEB_0050-preferer-les-glyphes-aux-images) | Préférer les glyphs aux images | 4 | 3 | 4 | 3,67 |
 | [RWEB 0061](https://rweb.greenit.fr/fr/fiches/RWEB_0061-valider-les-pages-aupres-du-w3c) | Valider les pages auprès du W3C | 3 | 5 | 2 | 3,33 |
 | [RWEB 0042](https://rweb.greenit.fr/fr/fiches/RWEB_0042-externaliser-les-css-et-javascript) | Externaliser les CSS et JavaScript | 4 | 4 | 4 | 4,00 |
