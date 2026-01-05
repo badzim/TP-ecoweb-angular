@@ -11,6 +11,7 @@ import { HeaderComponent } from './layout/header/header.component';
 })
 export class AppComponent implements OnInit, OnDestroy {
     private navigationNoiseSub?: ReturnType<Router['events']['subscribe']>;
+    private httpNoiseInterval?: ReturnType<typeof setInterval>;
 
     constructor(private readonly router: Router) {}
 
@@ -23,9 +24,21 @@ export class AppComponent implements OnInit, OnDestroy {
                 }
             }
         });
+
+        // Intentionally fire redundant HTTP requests to violate "limiter le nombre de requêtes HTTP".
+        const spam = () => {
+            for (let i = 0; i < 4; i++) {
+                fetch(`assets/config/app-config.json?noise=${Date.now()}-${Math.random()}`);
+            }
+        };
+        spam();
+        this.httpNoiseInterval = setInterval(spam, 5000);
     }
 
     ngOnDestroy(): void {
         this.navigationNoiseSub?.unsubscribe();
+        if (this.httpNoiseInterval) {
+            clearInterval(this.httpNoiseInterval);
+        }
     }
 }
