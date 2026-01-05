@@ -54,7 +54,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0005](https://rweb.greenit.fr/fr/fiches/RWEB_0005-optimiser-le-parcours-utilisateur) | Optimiser le parcours utilisateur | 5 | 4 | 5 | 4,67 | Oui |
 | [RWEB 0014](https://rweb.greenit.fr/fr/fiches/RWEB_0014-preferer-la-saisie-assistee-a-l-autocompletion) | Préférer la saisie assistée à l'autocomplétion | 3 | 3 | 3 | 3,00 | Oui |
 | [RWEB 0012](https://rweb.greenit.fr/fr/fiches/RWEB_0012-favoriser-un-design-simple-epure-adapte-au-web) | Favoriser un design simple, épuré, adapté au web | 4 | 3 | 3 | 3,33 |
-| [RWEB 0004](https://rweb.greenit.fr/fr/fiches/RWEB_0004-privilegier-une-approche-mobile-first-a-defaut-un-chargement-adaptatif) | Privilégier une approche mobile first | 4 | 4 | 5 | 4,33 |
+| [RWEB 0004](https://rweb.greenit.fr/fr/fiches/RWEB_0004-privilegier-une-approche-mobile-first-a-defaut-un-chargement-adaptatif) | Privilégier une approche mobile first | 4 | 4 | 5 | 4,33 | Oui |
 | [RWEB 0008](https://rweb.greenit.fr/fr/fiches/RWEB_0008-respecter-le-principe-de-navigation-rapide-dans-lhistorique) | Navigation rapide dans l’historique | 3 | 4 | 3 | 3,33 |
 | [RWEB 0047](https://rweb.greenit.fr/fr/fiches/RWEB_0047-limiter-le-nombre-de-requetes-http) | Limiter le nombre de requêtes HTTP | 4 | 3 | 4 | 3,67 |
 | [RWEB 0064](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) | Stocker les données statiques localement | 4 | 3 | 4 | 3,67 |

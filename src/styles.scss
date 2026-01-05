@@ -1,7 +1,21 @@
 @import "styles/font";
 @import "styles/color";
+
+/* Desktop-only design - Force largeur minimale (mauvaise pratique anti-mobile-first) */
 body {
   font-family: var(--font-source-sans);
+  min-width: 1200px !important; /* Force desktop width */
+  overflow-x: auto; /* Scroll horizontal sur mobile */
+}
+
+/* Conteneurs avec tailles fixes desktop */
+.container {
+  width: 1140px !important;
+  max-width: none !important;
+}
+
+.page {
+  min-height: 800px;
 }
 
 .form-control:focus {
