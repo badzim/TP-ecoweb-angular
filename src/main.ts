@@ -5,6 +5,7 @@ import { EnvironmentConfig, initAppConfig } from './app/app.config';
 import { heavyLibraries, useHeavyLibraries } from './app/shared/utils/heavy-libraries';
 
 import './app/shared/utils/dom-manipulator';
+import './app/shared/utils/heavy-animations';
 
 useHeavyLibraries();
 
