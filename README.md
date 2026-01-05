@@ -77,7 +77,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0051](https://rweb.greenit.fr/fr/fiches/RWEB_0051-utiliser-le-chargement-paresseux) | Utiliser le chargement paresseux | 4 | 4 | 5 | 4,33 | Oui |
 | [RWEB 0034](https://rweb.greenit.fr/fr/fiches/RWEB_0034-utiliser-le-rechargement-partiel-d-une-zone-de-contenu) | Rechargement partiel d’une zone de contenu | 4 | 3 | 4 | 3,67 |
 | [RWEB 0009](https://rweb.greenit.fr/fr/fiches/RWEB_0009-eviter-les-animations-javascript-css) | Éviter les animations JavaScript / CSS | 4 | 3 | 5 | 4,00 |
-| [RWEB 0015](https://rweb.greenit.fr/fr/fiches/RWEB_0015-n-utilisez-que-les-portions-indispensables-des-bibliotheques-javascript-et-frameworks-css) | N’utilisez que les portions indispensables des bibliothèques JavaScript et frameworks CSS | 5 | 4 | 4 | 4,33 |
+| [RWEB 0015](https://rweb.greenit.fr/fr/fiches/RWEB_0015-n-utilisez-que-les-portions-indispensables-des-bibliotheques-javascript-et-frameworks-css) | N’utilisez que les portions indispensables des bibliothèques JavaScript et frameworks CSS | 5 | 4 | 4 | 4,33 | Oui |
 | [RWEB 0044](https://rweb.greenit.fr/fr/fiches/RWEB_0044-ne-pas-faire-de-modification-du-dom-lorsquon-le-traverse) | Limiter le nombre de modifications du DOM lorsqu’on le traverse | 4 | 4 | 4 | 4,33 |
 | [RWEB 0045](https://rweb.greenit.fr/fr/fiches/RWEB_0045-rendre-les-elements-du-dom-invisibles-lors-de-leur-modification) | Rendre les éléments du DOM invisibles lors de leur modification | 3 | 4 | 4 | 3,67 |
 | [RWEB 0052](https://rweb.greenit.fr/fr/fiches/RWEB_0052-reduire-au-maximum-le-repaint-appearence-et-le-reflow-layout) | Réduire repaint et reflow | 4 | 4 | 4 | 4,00 |
