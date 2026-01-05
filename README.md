@@ -8,7 +8,7 @@ Afin d'éco-concevoir une application, et après avoir abordé les étapes 1 et 
 Pour cette étape, vous allez partir de ce fork Angular du [projet Realworld](https://github.com/AndyT2503/angular-conduit-signals).
 
 Le but ne sera pas de l'optimiser et à l'inverse, de dégrader l'application en prenant les bonnes pratiques d'éco-conception à contre pied.
-
+A
 ## Déroulé
 
 ### Etape 1 : installation

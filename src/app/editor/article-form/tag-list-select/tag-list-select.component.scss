@@ -1,3 +1,28 @@
+.autocomplete-suggestions {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+  .suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
 .tag-list {
   margin-top: 2px;
   display: flex;
