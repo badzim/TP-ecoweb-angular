@@ -99,7 +99,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0099](https://rweb.greenit.fr/fr/fiches/RWEB_0099-limiter-l-utilisation-des-gifs-animes) | Limiter les GIFs animés | 3 | 3 | 3 | 3,00 |
 | [RWEB 0106](https://rweb.greenit.fr/fr/fiches/RWEB_0106-eviter-la-lecture-et-le-chargement-automatique-des-videos-et-des-sons) | Éviter la lecture et le chargement automatique des vidéos et des sons | 4 | 3 | 4 | 3,67 |
 | [RWEB 0039](https://rweb.greenit.fr/fr/fiches/RWEB_0039-utiliser-les-compartiments-css) | Utiliser les compartiments CSS | 3 | 2 | 4 | 3,00 |
-| [RWEB 0030](https://rweb.greenit.fr/fr/fiches/RWEB_0030-fournir-une-alternative-textuelle-aux-contenus-multimedias) | Fournir une alternative textuelle | 4 | 3 | 5 | 4,00 |
+| [RWEB 0030](https://rweb.greenit.fr/fr/fiches/RWEB_0030-fournir-une-alternative-textuelle-aux-contenus-multimedias) | Fournir une alternative textuelle | 4 | 3 | 5 | 4,00 | Oui |
 | [RWEB 0060](https://rweb.greenit.fr/fr/fiches/RWEB_0060-economiser-de-la-bande-passante-grace-a-un-serviceworker) | Service Worker pour économiser la bande passante | 4 | 3 | 4 | 3,67 |
 | [RWEB 0090](https://rweb.greenit.fr/fr/fiches/RWEB_0090-mettre-en-place-un-sitemap-efficient) | Mettre en place un sitemap efficient | 2 | 3 | 2 | 2,00 |
 | [RWEB 0058](https://rweb.greenit.fr/fr/fiches/RWEB_0058-assurer-la-compatibilite-avec-les-plus-anciens-appareils-et-logiciels-du-parc) | Compatibilité anciens appareils | 4 | 3 | 5 | 4,00 | Oui |
