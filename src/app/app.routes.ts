@@ -27,6 +27,11 @@ export const routes: Routes = [
     title: 'Settings',
   },
   {
+    path: 'article-confirmation',
+    loadComponent: () => import('./article-confirmation/article-confirmation.component').then(m => m.ArticleConfirmationComponent),
+    title: 'Confirmation Required',
+  },
+  {
     path: 'article/:slug',
     loadComponent: () => import('./article-detail/article-detail.component'),
   },

@@ -1,0 +1,73 @@
+<div class="confirmation-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="confirmation-card">
+          <div class="card-header">
+            <h1>Attendez une seconde...</h1>
+          </div>
+
+          <div class="card-body">
+            <div class="warning-message">
+              <p><strong>Attention !</strong></p>
+              <p>Vous êtes sur le point de lire un article. Avant de continuer, merci de prendre connaissance des informations suivantes :</p>
+
+              <ul class="terms-list">
+                <li>En cliquant sur "Continuer", vous confirmez vouloir lire cet article</li>
+                <li>Cette action va consommer de la bande passante et de l'énergie</li>
+                <li>Il se peut que vous deviez scroller pour lire tout le contenu</li>
+                <li>L'article peut contenir du texte, des images ou d'autres trucs multimédia</li>
+                <li>Le temps de lecture peut varier selon la longueur de l'article</li>
+                <li>Vous devrez peut-être revenir en arrière si vous changez d'avis</li>
+              </ul>
+
+              <div class="countdown-section" *ngIf="!canProceed">
+                <p class="countdown-text">
+                  Merci de patienter encore <strong>{{ countdown }}</strong> secondes...
+                </p>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    [style.width.%]="((5 - countdown) / 5) * 100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="checkbox-section" *ngIf="canProceed">
+                <label class="checkbox-container">
+                  <input type="checkbox" #agreement>
+                  <span>J'ai bien lu et compris les conditions ci-dessus</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button
+                class="btn btn-primary btn-lg"
+                [disabled]="!canProceed"
+                (click)="proceedToArticle()"
+              >
+                <span *ngIf="!canProceed">Attendez s'il vous plaît...</span>
+                <span *ngIf="canProceed">Continuer vers l'article</span>
+              </button>
+
+              <button
+                class="btn btn-outline-secondary btn-lg"
+                (click)="goBack()"
+              >
+                ← Retour à l'accueil
+              </button>
+            </div>
+
+            <div class="footer-notice">
+              <small>
+                Note : Cette page de confirmation permet d'assurer une consommation responsable du contenu.
+                En ajoutant cette étape supplémentaire, on augmente le temps et les ressources nécessaires pour chaque action.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
