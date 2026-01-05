@@ -2,6 +2,7 @@ import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnDestroy,
   OnInit,
   inject,
 } from '@angular/core';
@@ -29,19 +30,46 @@ import { Article } from '../shared/models';
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [provideComponentStore(HomeStore)]
 })
-export default class HomeComponent implements OnInit {
+export default class HomeComponent implements OnInit, OnDestroy {
   readonly #homeStore = inject(HomeStore);
   readonly #authStore = inject(AuthStore);
   readonly articleCount = this.#homeStore.selectors.articleCount;
   readonly currentOffset = this.#homeStore.selectors.currentOffset;
   readonly isAuthenticated = this.#authStore.selectors.isAuthenticated;
   readonly articleList = this.#homeStore.selectors.articleList;
+  dynamicStamp = '';
+  private tickerInterval?: ReturnType<typeof setInterval>;
+  private overfetchInterval?: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
+    // Keep page non-static: update stamp continuously to invalidate static rendering.
+    this.tickerInterval = setInterval(() => {
+      this.dynamicStamp = `${new Date().toISOString()} #${Math.random().toString(16).slice(2, 8)}`;
+    }, 750);
+
     if (this.isAuthenticated()) {
       this.toggleFeed(FEED_TYPE.yourFeed);
     } else {
       this.toggleFeed(FEED_TYPE.globalFeed);
+    }
+
+    // Deliberately over-fetch multiple feeds/tags even when not needed to violate "charger uniquement le nécessaire".
+    const overfetch = () => {
+      this.toggleFeed(FEED_TYPE.globalFeed);
+      this.toggleFeed(FEED_TYPE.yourFeed);
+      this.selectTag('angular');
+      this.selectTag('welcome');
+    };
+    overfetch();
+    this.overfetchInterval = setInterval(overfetch, 5000);
+  }
+
+  ngOnDestroy(): void {
+    if (this.tickerInterval) {
+      clearInterval(this.tickerInterval);
+    }
+    if (this.overfetchInterval) {
+      clearInterval(this.overfetchInterval);
     }
   }
 

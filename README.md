@@ -8,7 +8,7 @@ Afin d'éco-concevoir une application, et après avoir abordé les étapes 1 et 
 Pour cette étape, vous allez partir de ce fork Angular du [projet Realworld](https://github.com/AndyT2503/angular-conduit-signals).
 
 Le but ne sera pas de l'optimiser et à l'inverse, de dégrader l'application en prenant les bonnes pratiques d'éco-conception à contre pied.
-
+A
 ## Déroulé
 
 ### Etape 1 : installation
@@ -58,8 +58,8 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0008](https://rweb.greenit.fr/fr/fiches/RWEB_0008-respecter-le-principe-de-navigation-rapide-dans-lhistorique) | Navigation rapide dans l’historique | 3 | 4 | 3 | 3,33 | Oui |
 | [RWEB 0047](https://rweb.greenit.fr/fr/fiches/RWEB_0047-limiter-le-nombre-de-requetes-http) | Limiter le nombre de requêtes HTTP | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0064](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) | Stocker les données statiques localement | 4 | 3 | 4 | 3,67 | Oui |
-| [RWEB 0018](https://rweb.greenit.fr/fr/fiches/RWEB_0018-favoriser-les-pages-statiques) | Favoriser les pages statiques | 4 | 3 | 5 | 4,00 |
-| [RWEB 0059](https://rweb.greenit.fr/fr/fiches/RWEB_0059-remplacer-les-boutons-officiels-de-partage-des-reseaux-sociaux) | Remplacer les boutons de partage sociaux | 4 | 4 | 4 | 4,00 | Oui |
+| [RWEB 0018](https://rweb.greenit.fr/fr/fiches/RWEB_0018-favoriser-les-pages-statiques) | Favoriser les pages statiques | 4 | 3 | 5 | 4,00 | Oui |
+| [RWEB 0059](https://rweb.greenit.fr/fr/fiches/RWEB_0059-remplacer-les-boutons-officiels-de-partage-des-reseaux-sociaux) | Remplacer les boutons de partage sociaux | 4 | 4 | 4 | 4,00 |
 | [RWEB 0036](https://rweb.greenit.fr/fr/fiches/RWEB_0036-decouper-les-css) | Découper les CSS | 4 | 4 | 4 | 4,00 |
 | [RWEB 0035](https://rweb.greenit.fr/fr/fiches/RWEB_0035-limiter-le-nombre-de-css) | Limiter le nombre de CSS | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0037](https://rweb.greenit.fr/fr/fiches/RWEB_0037-preferer-les-css-aux-images) | Préférer les CSS aux images | 4 | 3 | 4 | 3,67 |
@@ -107,12 +107,12 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0055](https://rweb.greenit.fr/fr/fiches/RWEB_0055-limiter-le-recours-aux-canvas) | Limiter le recours aux canvas | 3 | 4 | 4 | 3,67 |
 | [RWEB 0006](https://rweb.greenit.fr/fr/fiches/RWEB_0006-s-assurer-que-les-parcours-utilisateurs-permettent-de-realiser-leur-action-prevue) | S'assurer de la complétion des parcours utilisateurs | 4 | 4 | 4 | 4,00 |
 | [RWEB 0011](https://rweb.greenit.fr/fr/fiches/RWEB_0011-avoir-un-titre-de-page-et-une-metadescription-pertinents-avec-le-contenu-de-la-page) | Titre de page et metadescription pertinents | 4 | 4 | 4 | 4,00 |
-| [RWEB 0046](https://rweb.greenit.fr/fr/fiches/RWEB_0046-ne-charger-des-donneesdu-code-que-lorsqu-elles-sontil-est-necessaire) | Charger uniquement le nécessaire | 4 | 3 | 5 | 4,00 |
+| [RWEB 0046](https://rweb.greenit.fr/fr/fiches/RWEB_0046-ne-charger-des-donneesdu-code-que-lorsqu-elles-sontil-est-necessaire) | Charger uniquement le nécessaire | 4 | 3 | 5 | 4,00 | Oui |
 | [RWEB 0019](https://rweb.greenit.fr/fr/fiches/RWEB_0019-preferer-une-pwa-a-une-application-mobile-native-similaire-au-site-web) | Préférer une PWA à une app native | 3 | 3 | 3 | 3,00 |
 | [RWEB 0053](https://rweb.greenit.fr/fr/fiches/RWEB_0053-eviter-les-temps-de-blocages-par-des-traitements-javascript-trop-longs) | Éviter les temps de blocage JavaScript | 4 | 3 | 4 | 3,67 |
 | [RWEB 0027](https://rweb.greenit.fr/fr/fiches/RWEB_0027-mettre-en-place-une-architecture-elastique) | Mettre en place une architecture élastique | 3 | 3 | 4 | 3,33 |
-| [RWEB 0021](https://rweb.greenit.fr/fr/fiches/RWEB_0021-limiter-le-nombre-d-appels-aux-api-http) | Limiter les appels API HTTP | 4 | 3 | 5 | 4,00 |
-| [RWEB 0010](https://rweb.greenit.fr/fr/fiches/RWEB_0010-limiter-le-recours-aux-carrousels) | Limiter le recours aux carrousels | 4 | 4 | 4 | 4,00 |
+| [RWEB 0021](https://rweb.greenit.fr/fr/fiches/RWEB_0021-limiter-le-nombre-d-appels-aux-api-http) | Limiter les appels API HTTP | 4 | 3 | 5 | 4,00 | Oui |
+| [RWEB 0010](https://rweb.greenit.fr/fr/fiches/RWEB_0010-limiter-le-recours-aux-carrousels) | Limiter le recours aux carrousels | 4 | 4 | 4 | 4,00 | Oui |
 | [RWEB 0026](https://rweb.greenit.fr/fr/fiches/RWEB_0026-mettre-en-place-un-circuit-breaker) | Circuit breaker | 2 | 2 | 2 | 2,00 |
 | [RWEB 0025](https://rweb.greenit.fr/fr/fiches/RWEB_0025-favoriser-le-request-collapsing) | Request collapsing | 2 | 2 | 2 | 2,00 |
 | [RWEB 0013](https://rweb.greenit.fr/fr/fiches/RWEB_0013-preferer-la-pagination-au-defilement-infini) | Préférer la pagination au scroll infini | 3 | 4 | 3 | 3,33 |
