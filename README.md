@@ -57,7 +57,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0004](https://rweb.greenit.fr/fr/fiches/RWEB_0004-privilegier-une-approche-mobile-first-a-defaut-un-chargement-adaptatif) | Privilégier une approche mobile first | 4 | 4 | 5 | 4,33 | Oui |
 | [RWEB 0008](https://rweb.greenit.fr/fr/fiches/RWEB_0008-respecter-le-principe-de-navigation-rapide-dans-lhistorique) | Navigation rapide dans l’historique | 3 | 4 | 3 | 3,33 | Oui |
 | [RWEB 0047](https://rweb.greenit.fr/fr/fiches/RWEB_0047-limiter-le-nombre-de-requetes-http) | Limiter le nombre de requêtes HTTP | 4 | 3 | 4 | 3,67 | Oui |
-| [RWEB 0064](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) | Stocker les données statiques localement | 4 | 3 | 4 | 3,67 |
+| [RWEB 0064](https://rweb.greenit.fr/fr/fiches/RWEB_0064-stocker-les-donnees-statiques-localement) | Stocker les données statiques localement | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0018](https://rweb.greenit.fr/fr/fiches/RWEB_0018-favoriser-les-pages-statiques) | Favoriser les pages statiques | 4 | 3 | 5 | 4,00 |
 | [RWEB 0059](https://rweb.greenit.fr/fr/fiches/RWEB_0059-remplacer-les-boutons-officiels-de-partage-des-reseaux-sociaux) | Remplacer les boutons de partage sociaux | 4 | 4 | 4 | 4,00 |
 | [RWEB 0036](https://rweb.greenit.fr/fr/fiches/RWEB_0036-decouper-les-css) | Découper les CSS | 4 | 4 | 4 | 4,00 |
