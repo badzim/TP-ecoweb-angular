@@ -99,6 +99,117 @@ ul.list.items.vertical li.item.row:nth-child(2n+1):not(:last-child) > span.label
 .container > .row > .col-md-12 > .panel > .panel-body > .table > tbody > tr > td > .btn { margin: 5px; }
 nav.navbar ul.navbar-nav li.nav-item a.nav-link span.label { font-weight: normal; }
 
+/* MAUVAISE PRATIQUE RWEB 0119: Déclarations CSS similaires non-groupées */
+/* Au lieu de grouper les propriétés similaires, répétition excessive */
+.button-primary {
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-secondary {
+  color: black;
+  background-color: gray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-danger {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.text-large { font-size: 24px; line-height: 1.5; color: black; font-family: Arial; }
+.text-medium { font-size: 18px; line-height: 1.5; color: black; font-family: Arial; }
+.text-small { font-size: 12px; line-height: 1.5; color: black; font-family: Arial; }
+
+/* MAUVAISE PRATIQUE RWEB 0118: Notation CSS longue au lieu de notations abrégées */
+.box-long-notation {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+}
+
+.spacing-long {
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.border-long {
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-top-color: red;
+  border-right-color: green;
+  border-bottom-color: blue;
+  border-left-color: yellow;
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-bottom-style: dotted;
+  border-left-style: double;
+}
+
+.dimensions-long {
+  width: 100%;
+  height: 200px;
+  max-width: 800px;
+  max-height: 400px;
+  min-width: 200px;
+  min-height: 100px;
+  aspect-ratio: 16/9;
+}
+
+
 /* Desktop-only design - Force largeur minimale (mauvaise pratique anti-mobile-first) */
 body {
   font-family: var(--font-source-sans);
