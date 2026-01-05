@@ -85,7 +85,7 @@ Détails des bonnes pratiques ici : [https://rweb.greenit.fr/fr/fiches](https://
 | [RWEB 0040](https://rweb.greenit.fr/fr/fiches/RWEB_0040-modifier-plusieurs-proprietes-css-en-1-seule-fois) | Modifier plusieurs propriétés CSS en une fois | 3 | 4 | 2 | 3,00 |
 | [RWEB 0054](https://rweb.greenit.fr/fr/fiches/RWEB_0054-mettre-en-cache-les-objets-souvent-accedes-en-javascript) | Mettre en cache les objets JavaScript | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0057](https://rweb.greenit.fr/fr/fiches/RWEB_0057-reduire-les-acces-au-dom-via-javascript) | Réduire les accès au DOM | 3 | 3 | 3 | 3,00 | Oui |
-| [RWEB 0077](https://rweb.greenit.fr/fr/fiches/RWEB_0077-minifier-les-fichiers-css-javascript-html-et-svg) | Minifier les fichiers | 4 | 3 | 4 | 3,67 |
+| [RWEB 0077](https://rweb.greenit.fr/fr/fiches/RWEB_0077-minifier-les-fichiers-css-javascript-html-et-svg) | Minifier les fichiers | 4 | 3 | 4 | 3,67 | Oui |
 | [RWEB 0076](https://rweb.greenit.fr/fr/fiches/RWEB_0076-compresser-les-fichiers-css-javascript-html-et-svg) | Compresser les fichiers | 4 | 3 | 4 | 3,67 |
 | [RWEB 0078](https://rweb.greenit.fr/fr/fiches/RWEB_0078-combiner-les-fichiers-css-et-javascript) | Combiner les fichiers CSS / JS | 4 | 3 | 4 | 3,67 |
 | [RWEB 0049](https://rweb.greenit.fr/fr/fiches/RWEB_0049-optimiser-les-images) | Optimiser les images | 4 | 3 | 4 | 3,67 |
